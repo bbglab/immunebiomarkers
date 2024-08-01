@@ -1,0 +1,27 @@
+
+sets1 = list(
+    'prolif' = c('BUB1','CCNB2','CDK1','CDKN3','FOXM1','MAD2L1','MELK','MKI67','TOP2A'), ### Proliferation
+    'tcell' = c('CD8A','CD27','IFNG','GZMA','GZMB','PRF1','EOMES','CXCL9','CXCL10','CXCL11','CD274','CTLA4','FOXP3','TIGIT','IDO1','PSMB8','PSMB9','TAP1','TAP2'), ### T-cell effector
+    'tgfb' = c('TGFB1','TGFBR2','ACTA2','COL4A1','TAGLN','SH3PXD2A')  ### Pan TBRS 
+)
+
+clusters = list( 
+"tcell" = c("SLAMF7","CXCL9","GBP5","TAP1","CXCL10","STAT1","PYHIN1","SIRPG","TIGIT","CXCL13","PLA2G2D","CTSW","OR2I1P","UBE2L6","CD74","TLR8","B2M","CALHM6","PDCD1LG2","GBP1","IDO1","IRF1","UBD","PSMB9","APOL6","GBP4","TBX21","CCL4","CCL5","PRF1","IL2RG","CD7","LCK","CD27","SLAMF6","CD8A","CD2","CD3E","CD3G","CXCR3","IL12RB1","IKZF3","CD5","P2RY10","FASLG","NKG7","CD3D","CD8B","BAIAP2","LATS2","GGT5"),
+"tgfb" = c("C3orf36","CCDC3","CD248","COL4A1","COL4A2","COL5A1","COL5A2","FBN1","FN1","GGT5","OLFML2A","PALLD","S1PR3","SNAI1","SPARC","TCF4","THY1","VSTM4"),
+"prolif" = c("ANLN","ASPM","BIRC5","CCNA2","CENPA","CENPF","CENPI","CEP55","DLGAP5","DTL","GPSM2","GTSE1","HJURP","IQGAP3","KIF11","KIF14","KIF20A","KIF4A","KIFC1","KNL1","MCM8","MKI67","MYBL2","NDC80","NEK2","NUDT1","PRR11","RRM2","SKA1","SPC24","TOP2A","TPX2","TUBA1B","TYMS")
+)
+
+
+clusters5 = list(
+'tcell' = c('CCL5','CD2','CD3D','CD3E','CD3G','CD8A','FASLG','GBP5','IL12RB1','IL2RG','LCK','NKG7','P2RY10','PRF1','PYHIN1','SIRPG','SLAMF6','TBX21','TIGIT'),
+'prolif' = c('CCNA2','DLGAP5','HJURP','KIF11','KIF14','KIF4A','MKI67','PRR11','TOP2A','TPX2'),
+'tgfb' = c('CD248','COL4A1','COL5A1','COL5A2','FBN1','SPARC','THY1')
+)
+
+clusters10 = list(
+'tcell' = c('CCL5','CD2','CD3D','CD3E','CD3G','CD7','CD8A','CXCR3','FASLG','GBP5','IL12RB1','IL2RG','LCK','NKG7','P2RY10','PRF1','PYHIN1','SIRPG','SLAMF6','TBX21','TIGIT'),
+'prolif' = c('ANLN','ASPM','BIRC5','CCNA2','DLGAP5','GTSE1','HJURP','KIF11','KIF14','KIF20A','KIF4A','MKI67','NEK2','PRR11','TOP2A','TPX2'),
+'tgfb' = c('CD248','COL4A1','COL4A2','COL5A1','COL5A2','FBN1','NID1','SPARC','THY1')
+)
+
+gene_sets = list( "sets1" = sets1, "clusters" = clusters, "clusters5" = clusters5, "clusters10" = clusters10)

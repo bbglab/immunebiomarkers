@@ -1,0 +1,15 @@
+[pre]
+. "/home/$USER/anaconda3/etc/profile.d/conda.sh"
+conda activate r_env
+
+[params]
+cores = 4
+memory = 16G
+
+[jobs]
+Rscript $PWD/jobs/3_rbind.r
+Rscript $PWD/jobs/4_get-cors.r
+Rscript $PWD/jobs/5_combine.r
+Rscript $PWD/jobs/6_plot-ingredients.r  
+Rscript $PWD/jobs/7_plot-labels.r  
+Rscript $PWD/jobs/8_highlights.r

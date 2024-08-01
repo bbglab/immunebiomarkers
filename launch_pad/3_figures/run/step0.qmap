@@ -1,0 +1,49 @@
+[pre]
+. "/home/$USER/anaconda3/etc/profile.d/conda.sh"
+conda activate r_env
+
+[params]
+cores = 4
+memory = 16G
+
+[jobs]
+### prep the supplementary figures and tables
+Rscript $PWD/jobs/0_prep_five_hmf.r
+Rscript $PWD/jobs/1_prep_extension_five.r
+Rscript $PWD/jobs/1_rna_correlations.r
+
+### make collections of common figures
+Rscript $PWD/jobs/make_pred_study_plots.r
+Rscript $PWD/jobs/make_shapley_pdp_plots.r
+
+### make main figures
+#Rscript $PWD/jobs/figure2.r
+#Rscript $PWD/jobs/figure3.r
+
+Rscript $PWD/jobs/0_forest_prep.r
+Rscript $PWD/jobs/1_forest_plot.r
+Rscript $PWD/jobs/2_figure4_final_with_silhouette.r
+
+Rscript $PWD/jobs/figure5_b.r
+Rscript $PWD/jobs/figure5_c.r
+Rscript $PWD/jobs/figure5_d.r
+Rscript $PWD/jobs/figure5.r
+
+### make supplement main figures
+Rscript $PWD/jobs/0a_supplement_main_sim_modelling.r
+Rscript $PWD/jobs/0b_supplement_sim_latent.r
+Rscript $PWD/jobs/1_supplement_main_somatic_gene.r
+Rscript $PWD/jobs/2_supplement_main_non_hmf_effects.r 
+Rscript $PWD/jobs/3_supplement_main_hmf_non_cpi_preds.r
+Rscript $PWD/jobs/4_supplement_main_exhaustive_highlights.r
+Rscript $PWD/jobs/5_supplement_main_shapley_examples.r
+Rscript $PWD/jobs/5b_supplement_old_fig5g.r
+Rscript $PWD/jobs/5c_supplement_old_fig5ef.r
+Rscript $PWD/jobs/6_stratify_external_a.r 
+Rscript $PWD/jobs/6_stratify_external_b.r 
+Rscript $PWD/jobs/6_stratify_external.r 
+Rscript $PWD/jobs/7a_supplement_note_exhaustive_covariates_go.r
+Rscript $PWD/jobs/7b_supplement_note_exhaustive_latent_go.r
+Rscript $PWD/jobs/7c_supplement_note_exhaustive_correlation_go.r
+Rscript $PWD/jobs/8_tgfb_by_tcell.r
+Rscript $PWD/jobs/9_study_summaries.r

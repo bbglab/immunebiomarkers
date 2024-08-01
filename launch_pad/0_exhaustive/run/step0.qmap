@@ -1,0 +1,11 @@
+[pre]
+. "/home/$USER/anaconda3/etc/profile.d/conda.sh"
+conda activate r_env
+
+[params]
+cores = 2
+memory = 16G
+
+[jobs]
+Rscript $PWD/jobs/0_filters.r 'somatic_summary_tmbPerMb' 'isofox_gene_set_t_cell_effector' 'isofox_gene_set_prolif' 'isofox_gene_set_Pan_TBRS' 'clinical_meta_hasSystemicPreTreatment2'
+Rscript $PWD/jobs/1_prep.r

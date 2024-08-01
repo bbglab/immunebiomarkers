@@ -1,0 +1,14 @@
+[pre]
+. "/home/$USER/anaconda3/etc/profile.d/conda.sh"
+conda activate env_fig2_3
+
+[params]
+cores = 4
+memory = 16G
+
+[jobs]
+# Run the scripts for Figure 2 and 3 
+Rscript $PWD/jobs/figure2.r
+Rscript $PWD/jobs/figure3.r
+Rscript $PWD/jobs/3e_supplement_scatter.r
+Rscript $PWD/jobs/3_supplement_heatmaps.r

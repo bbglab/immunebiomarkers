@@ -1,0 +1,57 @@
+[pre]
+. "/home/$USER/anaconda3/etc/profile.d/conda.sh"
+conda activate r_env
+
+[params]
+cores = 4
+memory = 16G
+
+[jobs]
+Rscript $PWD/jobs/2_run-far.r "bor" "all" "none"
+Rscript $PWD/jobs/2_run-far.r "bor" "all" "tissue"
+Rscript $PWD/jobs/2_run-far.r "bor" "all" "purity_tissue"
+Rscript $PWD/jobs/2_run-far.r "bor" "all" "age_biopsy_purity_tissue"
+Rscript $PWD/jobs/2_run-far.r "bor" "all" "residuals"
+Rscript $PWD/jobs/2_run-far.r "bor" "all" "residuals2"
+
+Rscript $PWD/jobs/2_run-far.r "pfs" "all" "none"
+Rscript $PWD/jobs/2_run-far.r "pfs" "all" "tissue"
+Rscript $PWD/jobs/2_run-far.r "pfs" "all" "purity_tissue"
+Rscript $PWD/jobs/2_run-far.r "pfs" "all" "age_biopsy_purity_tissue"
+Rscript $PWD/jobs/2_run-far.r "pfs" "all" "residuals"
+Rscript $PWD/jobs/2_run-far.r "pfs" "all" "residuals2"
+
+Rscript $PWD/jobs/2_run-far.r "os" "all" "none"
+Rscript $PWD/jobs/2_run-far.r "os" "all" "tissue"
+Rscript $PWD/jobs/2_run-far.r "os" "all" "purity_tissue"
+Rscript $PWD/jobs/2_run-far.r "os" "all" "age_biopsy_purity_tissue"
+Rscript $PWD/jobs/2_run-far.r "os" "all" "residuals"
+Rscript $PWD/jobs/2_run-far.r "os" "all" "residuals2"
+
+Rscript $PWD/jobs/2_run-far.r "bor" "skin" "none"
+Rscript $PWD/jobs/2_run-far.r "bor" "skin" "purity"
+Rscript $PWD/jobs/2_run-far.r "pfs" "skin" "none"
+Rscript $PWD/jobs/2_run-far.r "pfs" "skin" "purity"
+Rscript $PWD/jobs/2_run-far.r "os" "skin" "none"
+Rscript $PWD/jobs/2_run-far.r "os" "skin" "purity"
+
+Rscript $PWD/jobs/2_run-far.r "bor" "lung" "none"
+Rscript $PWD/jobs/2_run-far.r "bor" "lung" "purity"
+Rscript $PWD/jobs/2_run-far.r "pfs" "lung" "none"
+Rscript $PWD/jobs/2_run-far.r "pfs" "lung" "purity"
+Rscript $PWD/jobs/2_run-far.r "os" "lung" "none"
+Rscript $PWD/jobs/2_run-far.r "os" "lung" "purity"
+
+Rscript $PWD/jobs/2_run-far.r "bor" "bladder" "none"
+Rscript $PWD/jobs/2_run-far.r "bor" "bladder" "purity"
+Rscript $PWD/jobs/2_run-far.r "pfs" "bladder" "none"
+Rscript $PWD/jobs/2_run-far.r "pfs" "bladder" "purity"
+Rscript $PWD/jobs/2_run-far.r "os" "bladder" "none"
+Rscript $PWD/jobs/2_run-far.r "os" "bladder" "purity"
+
+Rscript $PWD/jobs/2_run-far.r "bor" "other" "none"
+Rscript $PWD/jobs/2_run-far.r "bor" "other" "purity"
+Rscript $PWD/jobs/2_run-far.r "pfs" "other" "none"
+Rscript $PWD/jobs/2_run-far.r "pfs" "other" "purity"
+Rscript $PWD/jobs/2_run-far.r "os" "other" "none"
+Rscript $PWD/jobs/2_run-far.r "os" "other" "purity"

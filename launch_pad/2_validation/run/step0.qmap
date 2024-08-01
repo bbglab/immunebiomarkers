@@ -1,0 +1,23 @@
+[pre]
+. "/home/$USER/anaconda3/etc/profile.d/conda.sh"
+conda activate r_env
+
+[params]
+cores = 4
+memory = 16G
+
+[jobs]
+Rscript $PWD/jobs/0_prep_hmf.r
+Rscript $PWD/jobs/0a_prep_inspire.r
+Rscript $PWD/jobs/0b_prep_vhio.r
+Rscript $PWD/jobs/0c_prep_mariathan.r
+Rscript $PWD/jobs/0d_prep_ravi.r
+Rscript $PWD/jobs/0e_prep_parker.r
+Rscript $PWD/jobs/0f_prep_lyon.r
+Rscript $PWD/jobs/1_combine_studies.r
+Rscript $PWD/jobs/2_build_hmf_models.r 
+Rscript $PWD/jobs/3_hmf_cpi_loo_cv.r
+Rscript $PWD/jobs/4_apply_hmf_model_external.r
+Rscript $PWD/jobs/5_hmf_shaps.r
+Rscript $PWD/jobs/6_hmf_non_cpi_apply.r
+Rscript $PWD/jobs/7_measure.r
