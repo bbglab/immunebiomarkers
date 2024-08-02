@@ -1,6 +1,6 @@
 # Immune Biomarkers
 
-## Goal
+## Goal of Repository
 * Share code used to produce results for "Five factors underlie response to immunotherapy" paper. 
 
 ## Organization
