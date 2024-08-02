@@ -3,13 +3,13 @@
 ## Goal
 * Run an exhaustive association study relating survival and response outcomes to all features.
 
-### Methodology
+## Methodology
 * Best overall response associations modelled with logistic regressions.
 * Overall survival and progression free surival modeled with cox proportional hazards models. 
-* Testing of features is done across a variety of different covariate values. 
-* Testing is done Pan-Cancer and within 4 cohorts (Melanoma, Lung, Bladder, All Other).
+* Testing is done pan-cancer and with 4 cohorts (melanoma, lung, bladder, other).
+* Testing is done across a variety of covariate values (e.g. tumor location, age, purity). 
 * Multiple testing is adjusted using the Benjamini–Yekutieli FDR procedure.
-* Correlations of all features computed for 5 factors (TMB, T-cell, Proliferation, TGFB, Pretreatment).
+* Compute correlations of all features with five factors (TMB, T-cell, Pretreated, TGFB, Proliferation).
 
 ## Organization
 * 0_filters filters features based on a variety of criteria (i.e. number non-zero, variability, mean value). 

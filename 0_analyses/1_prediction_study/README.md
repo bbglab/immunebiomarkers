@@ -1,14 +1,22 @@
-# Immune Biomarkers
+# Prediction Study
 
 ## Goal
-* Share code used to produce results for "Five factors underlie response to immunotherapy" paper. 
+* Evaluate XGBoost models of OS and best overall response.
+
+## Methodology 
+* Models fit across grid of tuning parameters (sub-sampling, eta, depth)
+* Trained pan-cancer models used as initial inputs to cohort based models (Skin, Lung, Bladder, Other).
+* Models highlighted in paper have depth = 1 (i.e. no interaction), see similar performance.
+* Evaluate with cross-validation on 1000 repeated samples of 80/20 training/test data splits.  
+* Run models with different feature combinations
+* For more details see paper supplement Section 5.
 
 ## Organization
-* 0_analyses contains all analyses.  
-* 1_figures produces paper figures (0_analyses run first).
-* mission_control specifies directory locations and contains helper files.
-* launch_pad contains scripts run all the analyses.
-* env contains the conda environments .yaml files used to analyses and figures. 
+* 0_prep prepares data for evaluation study.
+* 1_study runs model evaluations for specific outcome (e.g. response) and features.
+* 2_combine combines results from 1_study across all outcome and feature settings.
+* Paper settings in ~/mission_control/paper_settings.R
+* Logic for fitting and evaluation ~/mission_control/eval_help.R  
 
 ## Requirements to run
 
@@ -16,17 +24,3 @@
 * Main analyses relie on output: https://github.com/bbglab/hartwig_biomarkers
 * Requires data access approval: https://www.hartwigmedicalfoundation.nl/en/data/data-access-request/ 
 * Hartwig data used for analyses was from data requst shared on August 9, 2022.
-
-### Downloaded External Data
-* For validation we downloaded external public data from other studies.
-* Need to download these external data and specify directory locations. 
-
-### QMap and conda environments
-* Jobs are submitted with the QMap tool from the bbglab: https://github.com/bbglab/qmap
-* QMap tool calls conda environments stored in env folder.
- 
-## Run it
-* From this root directory:
-```
-$ python run.py
-```
