@@ -8,6 +8,8 @@
 
 # don't upload external data
 external_data/
+ref/
+
 .ipynb_checkpoints/
 
 /workspace/projects/immune_biomarkers/repo/immune_biomarkers/launch_pad/1_prediction_study/*
