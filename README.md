@@ -6,9 +6,10 @@
 ## Organization
 * 0_analyses contains all analyses.  
 * 1_figures produces paper figures (0_analyses run first).
-* mission_control specifies directory locations and contains helper files.
+* env contains the conda environments .yaml files used to analyses and figures.* 
 * launch_pad contains scripts run all the analyses.
-* env contains the conda environments .yaml files used to analyses and figures. 
+* mission_control specifies directory locations and contains helper files.
+* ref contains VHIO processed data and gene sets used in analysis
 
 ## Requirements to run
 
