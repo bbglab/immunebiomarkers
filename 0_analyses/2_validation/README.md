@@ -1,14 +1,17 @@
-# Immune Biomarkers
+# Validation
 
 ## Goal
-* Share code used to produce results for "Five factors underlie response to immunotherapy" paper. 
+* Share code used to run validation analyses.
 
 ## Organization
-* 0_analyses contains all analyses.  
-* 1_figures produces paper figures (0_analyses run first).
-* mission_control specifies directory locations and contains helper files.
-* launch_pad contains scripts run all the analyses.
-* env contains the conda environments .yaml files used to analyses and figures. 
+* 0_* files each prepare the underyling data downloaded for each study (see requirements).   
+* 1_combied_studies.ipynb combines the prepared datasets into one dataframe. 
+* 2_* build Hartwig XGBoost models based on all CPI patients.
+* 3_* get leave-one-out estimates for Hartwig XGBoost models and extract dependence plots.  
+* 4_apply_hmf_model_external apply the Hartwig trained XGBoost models to other external studies.
+* 5_hmf_shaps extracts shapley values from Hartwig XGBoost models.
+* 6_hmf_non_cpi_apply applies XGBoost models to non-CPI treated patients in Hartwig. 
+* 7_measure evaluates the predictive performance of XGBoost models on external studies. 
 
 ## Requirements to run
 
@@ -18,15 +21,14 @@
 * Hartwig data used for analyses was from data requst shared on August 9, 2022.
 
 ### Downloaded External Data
-* For validation we downloaded external public data from other studies.
-* Need to download these external data and specify directory locations. 
-
-### QMap and conda environments
-* Jobs are submitted with the QMap tool from the bbglab: https://github.com/bbglab/qmap
-* QMap tool calls conda environments stored in env folder.
- 
-## Run it
-* From this root directory:
-```
-$ python run.py
-```
+* See methods section -> Validation Cohorts for description of external studies
+* Need to download these external data to reproduce analyses. 
+* INSPIRE: https://github.com/pughlab/inspire-genomics/.
+* Lyon: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE159067,
+        https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161537,
+        https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE162519,
+        https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE162520.
+* MARIATHASAN: http://research-pub.gene.com/IMvigor210CoreBiologies.
+* PARKER ICI: https://github.com/ParkerICI/MORRISON-1-public.
+* RAVI: https://zenodo.org/records/7625517.
+* VHIO: We share pre-processed data in the ref directory of repository. Repo has code to show data was pre-processed. 
