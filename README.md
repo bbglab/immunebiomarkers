@@ -14,13 +14,14 @@
 ## Requirements to run
 
 ### Pre-processed Hartwig Medical Foundation Data
-* Main analyses relie on processed output from: https://github.com/bbglab/hartwig_biomarkers
+* Main analyses relie on output from: https://github.com/bbglab/hartwig_biomarkers
 * Requires data access approval: https://www.hartwigmedicalfoundation.nl/en/data/data-access-request/ 
 * Hartwig data used for analyses was from data requst shared on August 9, 2022.
 
-### Downloaded External Data
-* For validation we used public data from other studies.
-* Need to download these external data (links are shared 0_analyses/2_validation) and specify directory locations. 
+### Downloaded non-Hartwig External Data
+* For validation we used publically shared data from other studies.
+* Need to download these external data and specify directory locations. 
+* Links to download external data are in 0_analyses/2_validation.
 
 ### QMap and conda environments
 * Jobs are submitted with the QMap tool from the bbglab: https://github.com/bbglab/qmap
