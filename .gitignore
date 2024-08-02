@@ -9,15 +9,12 @@
 # don't upload external data
 external_data/
 ref/
-
+step*/
 .ipynb_checkpoints/
-
-/workspace/projects/immune_biomarkers/repo/immune_biomarkers/launch_pad/1_prediction_study/*
-
-# tmp_dir
-/workspace/projects/immune_biomarkers/repo/immune_biomarkers/part1/tmp/
-
 *step*/
+Rplots*
+*Rhistory
+skin.ipynb
 
 # Node artifact files
 node_modules/

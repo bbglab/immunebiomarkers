@@ -20,6 +20,9 @@
 * 5_combine combines results of testing and computed correlations.
 * 6_*, 7_*, 8_* curate the results for display in figures (better names, groupings, etc.). 
 
+## Output
+* Complete output from this exhaustive study is available as supplemental table in paper. 
+
 ## Requirements to run
 
 ### Pre-processed Hartwig Medical Foundation Data
