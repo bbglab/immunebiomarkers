@@ -5,6 +5,7 @@ conda activate r_env
 [params]
 cores = 4
 memory = 16G
+extra = -p normal
 
 [jobs]
 Rscript $PWD/jobs/3_rbind.r

@@ -5,9 +5,9 @@
 
 ## Methodology
 * Download public data from non-Hartwig CPI PD/PDL1 studies.
-* For each study, extract response and survival; TMB and pretreatment; compute T-cell, TGFB, Proliferation gene sets 
-* Fit multivariate/univariate logistic regression and cox-ph regressions within/across studies (Figure 4, supplement)
-* Apply XGBoost models build on Hartwig data to external studies (Supplement)
+* For each study, extract response, survival, TMB, pretreatment (if available) and compute T-cell, TGFB, Proliferation gene sets. 
+* Fit logistic regression and cox-ph regressions within/across studies (Figure 4, supplement).
+* Apply XGBoost models build on Hartwig data to external studies (Supplement).
 
 ## Organization
 * 0_* files each prepare the underyling data downloaded for each study (see requirements).   
