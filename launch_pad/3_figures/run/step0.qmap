@@ -5,12 +5,12 @@ conda activate r_env
 [params]
 cores = 4
 memory = 16G
+extra = -p normal
 
 [jobs]
 ### prep the supplementary figures and tables
 Rscript $PWD/jobs/0_prep_five_hmf.r
 Rscript $PWD/jobs/1_prep_extension_five.r
-Rscript $PWD/jobs/1_rna_correlations.r
 
 ### make collections of common figures
 Rscript $PWD/jobs/make_pred_study_plots.r
@@ -42,6 +42,7 @@ Rscript $PWD/jobs/5c_supplement_old_fig5ef.r
 Rscript $PWD/jobs/6_stratify_external_a.r 
 Rscript $PWD/jobs/6_stratify_external_b.r 
 Rscript $PWD/jobs/6_stratify_external.r 
+Rscript $PWD/jobs/7_forest_plot_supp_univariate.r
 Rscript $PWD/jobs/7a_supplement_note_exhaustive_covariates_go.r
 Rscript $PWD/jobs/7b_supplement_note_exhaustive_latent_go.r
 Rscript $PWD/jobs/7c_supplement_note_exhaustive_correlation_go.r

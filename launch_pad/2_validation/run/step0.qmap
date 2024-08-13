@@ -5,6 +5,7 @@ conda activate r_env
 [params]
 cores = 4
 memory = 16G
+extra = -p normal
 
 [jobs]
 Rscript $PWD/jobs/0_prep_hmf.r
@@ -15,7 +16,9 @@ Rscript $PWD/jobs/0d_prep_ravi.r
 Rscript $PWD/jobs/0e_prep_parker.r
 Rscript $PWD/jobs/0f_prep_lyon.r
 Rscript $PWD/jobs/1_combine_studies.r
-Rscript $PWD/jobs/2_build_hmf_models.r 
+Rscript $PWD/jobs/2a_regression_models.r
+Rscript $PWD/jobs/2b_build_hmf_xgboost_models.r
+Rscript $PWD/jobs/2c_build_hmf_xgboost_models_pdp.r
 Rscript $PWD/jobs/3_hmf_cpi_loo_cv.r
 Rscript $PWD/jobs/4_apply_hmf_model_external.r
 Rscript $PWD/jobs/5_hmf_shaps.r

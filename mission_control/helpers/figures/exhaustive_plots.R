@@ -174,3 +174,6 @@ super_plot <- function(ingredients, labels, type = "main", i, j, x_axis, y_axis,
    gg + annotate
 
 }
+
+drop_features <- c("tcell", "tmb", "prolif","tgfb","pretreat","pretreat_comp","tissue",
+                   "tissue_full","age","biopsy","purity","pdl1", "clinical_systemic_composite" )

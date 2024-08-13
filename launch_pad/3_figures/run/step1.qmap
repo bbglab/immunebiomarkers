@@ -5,6 +5,7 @@ conda activate env_fig2_3
 [params]
 cores = 4
 memory = 16G
+extra = -p normal
 
 [jobs]
 # Run the scripts for Figure 2 and 3 

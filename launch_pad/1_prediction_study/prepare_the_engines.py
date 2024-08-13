@@ -5,6 +5,6 @@ I_DIR = f'{os.path.dirname(os.path.dirname(os.getcwd()))}/0_analyses/1_predictio
 O_DIR = os.getcwd() + '/jobs/'
 
 for i in os.listdir(I_DIR):
-    if "ipynb_checkpoints" not in i:
+    if "ipynb_checkpoints" not in i and 'README' not in i:
     	cmd = 'jupyter nbconvert --to script ' + I_DIR + i + ' --output ' + O_DIR + i.split(".ipynb")[0]
     	os.system(cmd) 

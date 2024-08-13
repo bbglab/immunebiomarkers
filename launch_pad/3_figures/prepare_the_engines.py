@@ -9,7 +9,7 @@ tmp_dirs = [I_DIR + '/0_analyses/3_supplement/', I_DIR + '/1_figures/supplement/
 
 for j in tmp_dirs:
     for i in os.listdir(j):
-        if 'checkpoints' not in i:
+        if 'checkpoints' not in i and 'README' not in i:
             print(i)
             cmd = 'jupyter nbconvert --to script ' + j + i + ' --output ' + O_DIR + i.split(".ipynb")[0]
             os.system(cmd)
