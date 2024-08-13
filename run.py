@@ -14,8 +14,8 @@ os.system('./0_go_exhaustive.sh')
 ### Step 1 - xgboost study
 print("Run XGboost study..")
 os.chdir(wd + '/1_prediction_study/')
-cmd1 = './1_go_study.sh'
-os.system(cmd1)
+os.system(prep_cmd)
+os.system('./1_go_study.sh')
 
 ### Step 2 - validation 
 print("Run validation analyses..")
